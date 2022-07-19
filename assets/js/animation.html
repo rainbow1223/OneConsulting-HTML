@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+  <div id='greeting'>Your personal business consultant in UAE<div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  var text = ["I will help you to start business", "Your personal business consultant in UAE"];
+  var counter = 0;
+  var elem = $("#greeting");
+  setInterval(change, 3000);
+  function change() {
+    elem.fadeOut(function () {
+      elem.html(text[counter]);
+      counter++;
+      if (counter >= text.length) { counter = 0; }
+      elem.fadeIn();
+    });
+  }
+</script>
+
+</html>
